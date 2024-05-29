@@ -1,0 +1,73 @@
+.hero-section {
+  position: relative;
+  background-image: url('../../public/images/forest.jpg'); /* Path relative to public directory */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Ensure the particles do not overflow */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+  z-index: 1; /* Place the overlay below the content but above the background image */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Place the content above the overlay */
+}
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Adds some space below the image */
+}
+
+.hero-name {
+  font-size: 3rem; /* Slightly larger font size for better emphasis */
+  font-weight: bold;
+  margin-bottom: 10px; /* Adds some space below the name */
+}
+
+.hero-description {
+  font-size: 1.5rem; /* Slightly larger font size for better readability */
+  color: #d1d1d1; /* Lighter grey for description text */
+  margin-bottom: 20px; /* Adds some space below the description */
+}
+
+.social-icons a {
+  color: #ffffff;
+  transition: color 0.2s;
+  margin: 0 10px; /* Adds space between the social icons */
+}
+
+.social-icons a:hover {
+  color: #6a6a6a; /* Grey color on hover */
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 20px;
+  color: #ffffff;
+  transition: color 0.2s;
+  z-index: 3;
+}
+
+.down-arrow:hover {
+  color: #6a6a6a; /* Grey color on hover */
+}
